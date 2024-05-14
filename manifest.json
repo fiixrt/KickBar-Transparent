@@ -2,18 +2,16 @@
   "manifest_version": 3,
   "name": "KickBar Transparent",
   "version": "1.0",
-  "description": "Modifies the video control bar on Kick to be transparent.",
+  "description": "Make the video control bar on Kick transparent for a better viewing experience.",
   "permissions": [
     "activeTab",
-    "scripting"
+    "https://kick.com/*"
   ],
-  "content_scripts": [
-    {
-      "matches": ["*://kick.com/*"],
-      "js": ["content.js"]
-    }
-  ],
-  "icons": {
-    "128": "kick.png"
-  }
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "kick.png"
+  },
+  "host_permissions": [
+    "https://kick.com/*"
+  ]
 }
